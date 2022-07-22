@@ -13,7 +13,10 @@ Zipcode.init(
         },
         zipcode: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            validate: {
+                isNumeric: true
+            }
         }
     },
     {

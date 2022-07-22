@@ -15,7 +15,7 @@ Post.belongsTo(Zipcode, {
 });
 
 Zipcode.hasMany(Post, {
-    foreignKey: 'post_id'
+    foreignKey: 'zip_id'
 });
 
 
