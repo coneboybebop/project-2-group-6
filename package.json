@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,11 +19,17 @@
   },
   "homepage": "https://github.com/coneboybebop/project-2-group-6#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.4",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+<<<<<<< HEAD
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+=======
     "handlebars": "^4.7.7",
+>>>>>>> ce52ccbdcd71c549b80dcd334cf79c62fa4b2e8a
     "mysql2": "^2.3.3",
-    "node": "^18.5.0",
-    "sequelize": "^6.21.3"
+    "sequelize": "^6.21.2"
   }
 }
