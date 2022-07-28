@@ -1,10 +1,7 @@
-
-{{#if }}
 <h2>What type of activity would you like to view?</h2>
 
 
-
-
+{{#if posts.length }}
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
@@ -12,3 +9,8 @@
   </li>
   {{/each}}
 </ol>
+{{/if}}
+
+{{#unless post.length }}
+<p>Sorry! No posts in this area yet!</p>
+{{/unless}}
