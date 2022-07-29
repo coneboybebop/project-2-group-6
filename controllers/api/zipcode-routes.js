@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Zipcode } = require('../../models');
 const sequelize = require('../../config/connection');
+const zipcodes = require('zipcodes');
 
 router.get('/', (req, res) => {
     Zipcode.findAll({
@@ -22,10 +23,10 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:zipcode', (req, res) => {
     Zipcode.findOne({
         where: {
-            id: req.params.id
+            zipcode: req.params.zipcode
         },
         include: [
             {
@@ -40,8 +41,10 @@ router.get('/:id', (req, res) => {
     })
     .then(dbZipcodeData => {
         if (!dbZipcodeData) {
-            res.status(404).json({ message: 'This Zipcode is not in the database' });
-            return;
+            Zipcode.create({
+                zipcode: req.params.zipcode,
+                city_name: zipcodes.lookup(req.params.zipcode).city
+            })
         }
         res.json(dbZipcodeData);
     })
@@ -53,7 +56,8 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     Zipcode.create({
-        zipcode: req.body.zipcode
+        zipcode: req.body.zipcode,
+        city_name: zipcodes.lookup(req.body.zipcode).city
     })
     .then(dbZipcodeData => res.json(dbZipcodeData))
     .catch(err => {
