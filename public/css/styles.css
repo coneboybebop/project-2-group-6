@@ -33,9 +33,9 @@ main {
 }
 
 
-h2, h3, form {
+h2, h3, form, input {
     text-align: center;  
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--dark);
     padding: 0 10px;
     display: inline-block;
