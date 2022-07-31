@@ -2,8 +2,8 @@
 
 <h2>What type of activity would you like to view?</h2>
   <div>
-    <button type="button">Places to Eat</button>
-    <button type="button">Things to Do</button>
+    <button type="button" id="eat">Places to Eat</button>
+    <button type="button" id="to-do">Things to Do</button>
   </div>
 
 
@@ -11,7 +11,7 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-    {{> post-info post }}
+    {{> posts post }}
   </li>
   {{/each}}
 </ol>
@@ -20,3 +20,5 @@
 {{#unless post.length }}
 <p>Sorry! No posts in this area yet!</p>
 {{/unless}}
+
+

@@ -1,181 +1,147 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #225ca3;
-    font-weight: bold;
-    transition: color .1s;
-  }
-  
-  a:hover {
-    color: #3486eb;
-  }
-  
-  button {
-    background-color: #225ca3;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #3486eb;
-  }
-  
-  .post-list {
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid #3486eb;
-  }
-  
-  textarea {
-    min-width: 40%;
-    min-height: 100px;
-  }
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
-    display: block;
-  }
-  
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
-  }
-  
-  header h1 {
-    font-size: 1em;
-  }
-  
+:root {
+    --primary: #728370;
+    --secondary: #333333;
+    --tertiary: #0C8054;
+    --dark: #170c01;
+    --border-radius: .3rem;
+    
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: var(--primary);
+      margin: 0;
+      padding: 0;
+      font-family: "IBM Plex Sans", sans-serif;
+      color: var(--dark);
+      line-height: 1.5;
+      font-size: 22px;
+    }
+    
   main {
-    flex: 1;
-    padding: 2% 4%;
-  }
+      margin: 20px auto;
+      width: auto;
+    }
+    header{
   
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
-  }
+      text-align: center;
+      background: linear-gradient(#fdf5eb 50%, #0C8054);
+      margin-bottom: 12px;
+    }
   
-  .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
-  }
   
-  .delete-post-btn {
-    background-color: #d41414;
-  }
+    .application-title {
+      text-align: center;  
+      font-size: 3rem;
+      color: var(--dark);
+      padding: 0 10px;
+      display: inline-block;
+      width: 100%;
+     
+    }
   
-  .delete-post-btn:hover {
-    background-color: #ff643d;
-  }
   
-  .post {
-    margin-bottom: 2%;
-    line-height: 150%;
-  }
+    .section {
+      margin: 0 0 20px 0;
+      border: 3px solid var(--dark);
+      border-radius: var(--border-radius);
+    }
+    
+    .section-header {
+      color: var(--primary);
+      background-color: var(--dark);
+      padding: 2.5%;
+      border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    }
+    
+    .section-body {
+      padding: 2.5%;
+    }
   
-  .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
-  }
-  
-  .edit-link {
+  .form-label,
+  .form-input,
+  .form-textarea {
     display: block;
-    margin: -1.5% 0 2% 0;
   }
+  .form-label {
+      font-size: 1.1rem;
+      margin: 0 0 0 5px;
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: 3%;
+      margin: 5px 0;
+      font-size: 1.2rem;
+      border: 2px solid var(--dark);
+      border-radius: var(--border-radius);
   
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
+    }
+    
+    .btn {
+      font-size: 1.3rem;
+      text-decoration:none;
+      padding: 6px 5px;
+      width: 95%;
+      display: block;
+      color: var(--primary);
+      border: none;
+      outline: none;
+      background-color: var(--secondary);
+      box-shadow: 3px 3px var(--dark);
+      transform: translate(-1px, -1px);
+      height: fit-content;
   
-  .upvote-btn:hover {
-    background-color: #1f9c13;
-  }
+    }
   
-  .comment-form {
-    margin-bottom: 5%;
-  }
+    .btn:visited {
   
-  .comment {
-    padding: 1%;
-    margin-bottom: 1%;
-  }
+      color: var(--primary);
+    }
+    
+     .btn:hover {
+      color: var(--primary);
+      background-color: var(--tertiary);
+      transform: translate(0, 0);
+      box-shadow: 2px 2px var(--dark);
+    }
+    
+    .btn-inline {
+      display: inline;
+    }
+    
+    .btn-back {
+      border-radius: var(--border-radius);
+      color: var(--primary);
+      border: none;
+      outline: none;
+      background-color: var(--light-dark);
+      box-shadow: 3px 3px var(--secondary);
+      transform: translate(-1px, -1px);
+      display: inline-block;
+      width: auto;
+      margin-top: 20px;
+      padding: 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }  
   
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
-  }
   
-  .comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-  }
+    #input textarea {
   
-  .new-post-form input {
-    width: 300px;
-  }
-  
-  .edit-post-form {
-    margin-bottom: 5%;
-  }
-  
-  footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-  }
+      background: var(--secondary);
+    }
+
+#login #logout {
+    background-color: var(--primary);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0.2;
+}
+
+
 
 /* Modal for zip code entry validation */
 .modal{
