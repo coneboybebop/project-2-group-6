@@ -1,15 +1,74 @@
 <div class="wrapper">
     <h2 class="info">See what others in your area are up to!</h2>
-
+  
     <h3 class="instructions">Enter your zip code to see things to do in your area</h3>
-</div>
-
-<form class="zip-form">
+  </div>
+  
+  <form class="zip-form" onsubmit="CheckText(event)">
     <div>
-        <textarea name="zip-input" placeholder="Enter Zip Code"></textarea>
+        <textarea name="zip-input" placeholder="Enter Zip Code" id="zip-input" minlength="5" maxlength="5"></textarea>
     </div>
-
+  
     <div>
-        <button type="submit">Enter</button>
+        <button type="submit" id="submit-zip">Enter</button>
     </div>
-</form>
+  </form>
+  
+  <div id="modal-1" class="modal-1 modal">
+  
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close1">&times;</span>
+      <h2>Please enter your zipcode</h2>
+    </div>
+    <div class="modal-body">
+      <p>Type your five digit zipcode into the provided textbox</p>
+    </div>
+    <div class="modal-footer">
+      <h3></h3>
+    </div>
+  </div>
+  
+  </div>
+  
+  
+  <div id="modal-2" class="modal-2 modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close2">&times;</span>
+        <h2>The value that you entered is not a number and therefore not a valid zipcode</h2>
+      </div>
+      <div class="modal-body">
+        <p>Please type your five digit zipcode into the textbox</p>
+      </div>
+      <div class="modal-footer">
+        <h3></h3>
+      </div>
+    </div>
+    
+    </div>
+  
+    
+  <div id="modal-3" class="modal-3 modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close3">&times;</span>
+        <h2>The value that you entered is not a sufficient length</h2>
+      </div>
+      <div class="modal-body">
+        <p>Please type a valid five digit zipcode into the textbox</p>
+      </div>
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+    </div>
+    
+    </div>
+  
+  <script src="../public/javascript/homepage.js"></script>
+  
