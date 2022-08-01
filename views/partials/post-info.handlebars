@@ -1,9 +1,13 @@
-<div class="posts">
-    {{#each this}}
+<div class="posts"> 
     <section class="posts">
         <div class="meta">
-            {{post_content}}
+            <ol>
+                {{#each this}}
+                <li>
+                    {{post_content}}
+                </li>
+                {{/each}}
+            </ol>      
         </div>
     </section>
-    {{/each}}
 </div>

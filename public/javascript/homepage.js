@@ -3,7 +3,8 @@ document.getElementById("submit-zip").addEventListener('click', CheckText);
 
 
 
-function CheckText(){
+function CheckText(event){
+  event.preventDefault();
     var ZipUser   = document.getElementById("zip-input");
     var textValue = document.getElementById("zip-input").value;
     var maxlength = ZipUser.getAttribute('maxlength');
@@ -20,6 +21,7 @@ function CheckText(){
         {
         InsuffCharacters(event);
         }
+        document.location.replace(`/regional/`+textValue);
 }
 
 
