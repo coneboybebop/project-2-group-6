@@ -34,6 +34,9 @@ async function CheckText(event){
         }
 };
 
+  
+
+
 
 // Get the modal based on the message being delivered for the zip code critera
 var modal1 = document.getElementById("modal-1");
