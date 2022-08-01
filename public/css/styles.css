@@ -91,7 +91,7 @@ display: block;
 
 }
 
-#login, #logout, #submit-zip {
+.button, #submit-zip {
     font-size: 1.3rem;
     text-decoration:none;
     padding: 6px 5px;
@@ -114,12 +114,8 @@ display: block;
     background: var(--secondary);
 }
 
-#login #logout {
-    background-color: var(--primary);
-    border-radius: 8px;
-    box-shadow: 3px 3px 0.2;
-    text-align: center;
-}
+
+
 
 
 
