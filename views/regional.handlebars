@@ -1,23 +1,18 @@
 <h1>{{city_name}}</h1>
 
-<h2>What type of activity would you like to view?</h2>
-  <div>
-    <button type="button" id="eat">Places to Eat</button>
-    <button type="button" id="to-do">Things to Do</button>
-  </div>
-
-
-{{#if posts.length }}
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    {{> posts post }}
-  </li>
-  {{/each}}
-</ol>
+{{#if posts.length}}
+<section>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ol>
+</section>
 {{/if}}
 
-{{#unless post.length }}
+{{#unless posts.length }}
 <p>Sorry! No posts in this area yet!</p>
 {{/unless}}
 

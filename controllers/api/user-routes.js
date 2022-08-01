@@ -47,6 +47,10 @@ router.post('/', (req, res) => {
           res.json(dbUserData);
         });
       })
+      .catch(err => { 
+        console.log(err);
+        res.status(500).json(err);
+      })
     });
 
 router.post('/login', (req, res) => {
@@ -73,7 +77,7 @@ router.post('/login', (req, res) => {
             req.session.loggedIn = true;
       
             res.json({ user: dbUserData, message: 'You are now logged in!' });
-        });
+        })
     });
 });
 
