@@ -31,10 +31,12 @@ main {
     background: linear-gradient(#0C8054 10%, #fdf5eb);
     margin-bottom: 12px;
     margin-top: 0px;
+
 }
 
 .application-title {
-    color: var(--tertiary);
+    color: var(--primary);
+    text-shadow: 3px 3px var(--dark);
 }
 
 
@@ -87,7 +89,7 @@ display: block;
 
 
 
-.box-input {
+.input-box {
     width: 30%;
     padding: 3%;
     margin: 5px 0;
