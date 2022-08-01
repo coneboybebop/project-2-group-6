@@ -1,31 +1,28 @@
-<h1>{{city_name}}</h1>
-
 {{#if posts.length}}
-<section>
-  <ol>
+<header>
     {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-    </li>
+  <div>
+      {{> zipcode post}}
+  </div>
     {{/each}}
-  </ol>
-</section>
+</header>
 {{/if}}
 
 {{#unless posts.length }}
 <p>Sorry! No posts in this area yet!</p>
 {{/unless}}
-
+{{#if loggedIn}}
 <section>
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
     <div>
-      <label for="post-title">Title</label>
+      <label for="post-content">Content</label>
       <input type="text" id="post-title" name="post-title" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
+{{/if}}
 
 
