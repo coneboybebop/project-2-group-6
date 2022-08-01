@@ -31,10 +31,12 @@ main {
     background: linear-gradient(#0C8054 10%, #fdf5eb);
     margin-bottom: 12px;
     margin-top: 0px;
+
 }
 
 .application-title {
-    color: var(--tertiary);
+    color: var(--primary);
+    text-shadow: 3px 3px var(--dark);
 }
 
 
@@ -81,17 +83,21 @@ display: block;
     margin: 0 0 0 5px;
 }
 
-.form-input {
-    width: 100%;
-    padding: 3%;
-    margin: 5px 0;
+.signup-form, .login-form {
+    text-align: center;
+}
+
+
+
+.input-box {
+    width: 30%;
     font-size: 1.2rem;
     border: 2px solid var(--dark);
     border-radius: var(--border-radius);
 
 }
 
-#login, #logout, #submit-zip {
+.button {
     font-size: 1.3rem;
     text-decoration:none;
     padding: 6px 5px;
@@ -106,6 +112,11 @@ display: block;
     height: fit-content;
     justify-content: center;
     text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
     
 }
 
@@ -114,12 +125,8 @@ display: block;
     background: var(--secondary);
 }
 
-#login #logout {
-    background-color: var(--primary);
-    border-radius: 8px;
-    box-shadow: 3px 3px 0.2;
-    text-align: center;
-}
+
+
 
 
 
