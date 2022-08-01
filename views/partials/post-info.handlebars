@@ -1,7 +1,9 @@
-        <article class="post">
-            <div>
-                <span>{{zipcode}}</span>
-                <p>{{city_name}} </p>
-                <p>{{posts}}</p>
-            </div>
-        </article>
+<div class="posts">
+    {{#each this}}
+    <section class="posts">
+        <div class="meta">
+            {{post_content}}
+        </div>
+    </section>
+    {{/each}}
+</div>
