@@ -1,10 +1,11 @@
+<h1>{{city_name}}</h1>
 
 {{#if posts.length}}
 <section>
   <ol>
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
+      {{> zipcode post}}
     </li>
     {{/each}}
   </ol>
