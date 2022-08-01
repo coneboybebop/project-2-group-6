@@ -1,5 +1,5 @@
 
-document.getElementById("submit-zip").addEventListener('click', CheckText);
+const zipcode = document.getElementById("submit-zip").addEventListener('click', CheckText);
 
 
 
@@ -76,3 +76,4 @@ window.onclick = function(event) {
   }
 }
 
+module.exports = zipcode;
