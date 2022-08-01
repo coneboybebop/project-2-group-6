@@ -1,20 +1,5 @@
 <h1>{{city_name}}</h1>
 
-<<<<<<< HEAD
-{{#if posts.length}}
-<section>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}}
-
-{{#unless posts.length }}
-=======
 
 {{#if posts.length }}
 <ol class="post-list">
@@ -29,7 +14,6 @@
 <input>
 
 {{#unless post.length }}
->>>>>>> 6bf743c7afd8feafd050e45fe6c4c5c8e2c4e0dc
 <p>Sorry! No posts in this area yet!</p>
 {{/unless}}
 
