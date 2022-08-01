@@ -70,24 +70,6 @@
     
     </div>
 
-    <h1>{{city_name}}</h1>
 
-
-    {{#if posts.length }}
-    <ol class="post-list">
-    {{#each posts as |post|}}
-    <li>
-        {{> posts post }}
-    </li>
-    {{/each}}
-    </ol>
-    {{/if}}
-
-    <input>
-
-    {{#unless post.length }}
-    <p>Sorry! No posts in this area yet!</p>
-    {{/unless}}
-    
  <script src="../public/javascript/homepage.js"></script>
   
