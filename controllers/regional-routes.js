@@ -27,7 +27,11 @@ router.get('/:zipcode', (req, res) => {
         // serialize data before passing to template
         const posts = dbPostData.map(post => post.get({ plain: true }));
         res.render('regional', { posts, loggedIn: req.session.loggedIn});
-});
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 module.exports = router;

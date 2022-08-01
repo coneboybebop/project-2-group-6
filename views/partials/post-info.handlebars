@@ -2,11 +2,22 @@
     <section class="posts">
         <div class="meta">
             <ol>
+                {{#if this.length}}
                 {{#each this}}
                 <li>
+                    <p>
+                        Category: {{category}}
+                    </p>
+                    <div>
                     {{post_content}}
+                    </div>
+                    <span>posted by: {{user.username}} </span>
                 </li>
                 {{/each}}
+                {{/if}}
+                {{#unless this.length}}
+                <span>No posts for this area yet!</span>
+                {{/unless}}
             </ol>      
         </div>
     </section>
