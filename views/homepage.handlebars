@@ -64,11 +64,30 @@
         <p>Please type a valid five digit zipcode into the textbox</p>
       </div>
       <div class="modal-footer">
-        <h3></h3>
+        <h3>Modal Footer</h3>
       </div>
     </div>
     
     </div>
-  
- <script src="javascript/homepage.js"></script>
+
+    <h1>{{city_name}}</h1>
+
+
+    {{#if posts.length }}
+    <ol class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> posts post }}
+    </li>
+    {{/each}}
+    </ol>
+    {{/if}}
+
+    <input>
+
+    {{#unless post.length }}
+    <p>Sorry! No posts in this area yet!</p>
+    {{/unless}}
+    
+ <script src="../public/javascript/homepage.js"></script>
   
