@@ -97,14 +97,14 @@ display: block;
     padding: 6px 5px;
     width: 30%;
     display: block;
-    color: var(--primary);
+    color: var(--dark);
     border: none;
     outline: none;
     background-color: var(--secondary);
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
     height: fit-content;
-    justify-content: center;
+    
 
 }
 
