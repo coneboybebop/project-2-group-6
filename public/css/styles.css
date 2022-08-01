@@ -81,8 +81,12 @@ display: block;
     margin: 0 0 0 5px;
 }
 
+.signup-form, .login-form {
+    text-align: center;
+}
+
 .box-input {
-    width: 100%;
+    width: 30%;
     padding: 3%;
     margin: 5px 0;
     font-size: 1.2rem;
