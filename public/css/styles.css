@@ -40,7 +40,7 @@ main {
 }
 
 
-h2, h3, form, input{
+h1, h2, h3, form, input{
     text-align: center;  
     font-size: 2rem;
     color: var(--dark);

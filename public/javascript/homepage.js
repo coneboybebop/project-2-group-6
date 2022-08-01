@@ -3,7 +3,8 @@ document.getElementById("submit-zip").addEventListener('click', CheckText);
 
 
 
-function CheckText(){
+async function CheckText(event){
+  event.preventDefault();
     var ZipUser   = document.getElementById("zip-input");
     var textValue = document.getElementById("zip-input").value;
     var maxlength = ZipUser.getAttribute('maxlength');
@@ -20,24 +21,18 @@ function CheckText(){
         {
         InsuffCharacters(event);
         }
-
-        else{
-          ZipcodeInputFormHandler();
+        const response = await fetch('/api/zipcodes/'+textValue, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
           }
-  }
-  
-  async function ZipcodeInputFormHandler(event) {
-      event.preventDefault();
-      var UserZip = document.getElementById("zip-input").value;
+        });
         if (response.ok) {
-          document.location.replace('/regional/'+UserZip);
+          document.location.replace('/regional/'+textValue);
         } else {
-          alert(response.statusText);
+          alert(response.status);
         }
-      }
-
-  
-
+};
 
 
 // Get the modal based on the message being delivered for the zip code critera
