@@ -48,7 +48,7 @@ h2, h3, form, input{
     
 }
 
-input {
+.zip-input {
     width: 30%;
     text-align: left;
 }
