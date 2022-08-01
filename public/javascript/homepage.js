@@ -29,23 +29,13 @@ function CheckText(){
   async function ZipcodeInputFormHandler(event) {
       event.preventDefault();
       var UserZip = document.getElementById("zip-input").value;
-  
-      if (UserZip) {
-        const response = await fetch('/api/zipcodes', {
-          method: 'post',
-          body: JSON.stringify({
-            textValue
-          }),
-          headers: { 'Content-Type': 'application/json' }
-        });
-    
         if (response.ok) {
-          document.location.replace('/');
+          document.location.replace('/regional/'+UserZip);
         } else {
           alert(response.statusText);
         }
       }
-    }
+
   
 
 
