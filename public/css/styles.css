@@ -96,7 +96,7 @@ display: block;
     text-decoration:none;
     padding: 6px 5px;
     width: 30%;
-    display: block;
+    display: flex;
     color: var(--dark);
     border: none;
     outline: none;
@@ -104,42 +104,10 @@ display: block;
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
     height: fit-content;
+    justify-content: center;
+    text-align: center;
     
-
 }
-
-.btn:visited {
-
-    color: var(--primary);
-}
-
-    .btn:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
-}
-
-.btn-inline {
-    display: inline;
-}
-
-.btn-back {
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--secondary);
-    transform: translate(-1px, -1px);
-    display: inline-block;
-    width: auto;
-    margin-top: 20px;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
-}  
-
 
 #input textarea {
 
