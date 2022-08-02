@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
     Post.create({
         post_content: req.body.post_content,
         category: req.body.category,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         zip_id: req.body.zip_id
     })
     .then(dbPostData => res.json(dbPostData))
