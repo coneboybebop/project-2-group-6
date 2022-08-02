@@ -64,10 +64,11 @@ h1, h2, h3, form, input{
 }
 
 .posts {
-    color: var(--primary);
-    background-color: var(--secondary);
+    color: var(--secondary);
+    background-color: var(--tertiary);
     padding: 2.5%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    width: 50%;
 }
 
 .section-body {
