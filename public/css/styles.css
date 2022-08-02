@@ -95,6 +95,15 @@ display: block;
     border: 2px solid var(--dark);
     border-radius: var(--border-radius);
 
+
+
+}
+
+.post-background {
+    width: 100%;
+    border-radius: var(--border-radius);
+    
+
 }
 
 .button {
@@ -124,6 +133,7 @@ display: block;
 
     background: var(--secondary);
 }
+
 
 
 
