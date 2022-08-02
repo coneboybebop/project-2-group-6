@@ -125,6 +125,12 @@ display: block;
     background: var(--secondary);
 }
 
+span {
+    background-color: var(--tertiary);
+    color: var(--primary);
+    width: 100%;
+}
+
 
 
 
