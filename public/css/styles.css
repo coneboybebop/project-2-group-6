@@ -221,6 +221,10 @@ display: block;
     animation-name: animatetop;
     animation-duration: 0.4s
   }
+
+  .hide {
+    display: none;
+  }
   
   /* Add Animation */
   @keyframes animatetop {
