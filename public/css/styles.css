@@ -66,8 +66,8 @@ h1, h2, h3, form, input{
 .posts {
     color: var(--secondary);
     background-color: var(--tertiary);
-    padding: 2.5%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    margin: 2px;
+    border-radius: 25px;
     width: 50%;
 }
 
