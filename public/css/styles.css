@@ -63,7 +63,7 @@ h1, h2, h3, form, input{
     border-radius: var(--border-radius);
 }
 
-.post {
+.posts {
     color: var(--primary);
     background-color: var(--secondary);
     padding: 2.5%;
