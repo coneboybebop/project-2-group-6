@@ -1,5 +1,5 @@
 {{#if loggedIn}}
-<section>
+<section class="new-post">
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
@@ -28,17 +28,31 @@
 <script src="/javascript/add-post.js"></script>
 {{/if}}
 {{#if posts.length}}
-<header>
+<section>
+  <ol>
     {{#each posts as |post|}}
-  <div>
-      {{> zipcode post}}
-  </div>
+    <li>
+      {{> post-info post}}
+    </li>
     {{/each}}
-</header>
+  </ol>
+</section>
 {{/if}}
 
 {{#unless posts.length }}
 <p>Sorry! No posts in this area yet!</p>
 {{/unless}}
+
+<section>
+  <h2>Create New Post</h2>
+
+  <form class="new-post-form">
+    <div>
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" name="post-title" />
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
 
 
