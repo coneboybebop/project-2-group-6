@@ -37,6 +37,7 @@ main {
 .application-title {
     color: var(--primary);
     text-shadow: 3px 3px var(--dark);
+    font-size: 50px;
 }
 
 
@@ -234,6 +235,47 @@ display: block;
 
   .hide {
     display: none;
+  }
+
+  .btn {
+    border-radius: 5px;
+    background-color: var(--tertiary);
+    text-decoration: none;
+    padding: 5px;
+    border: 2px, solid black;
+    color: black;
+    font-size: 15px;
+    margin: 5px;
+  }
+
+  .new-post {
+    border: solid 2px black;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .new-post h2 {
+    text-align: center;
+    background: linear-gradient(#0C8054 10%, #fdf5eb);
+    margin-bottom: 12px;
+    margin-top: 0px
+  }
+
+  .new-post-form {
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  .new-post textarea {
+    display: inline-block;
+    min-width: 75%;
+    min-height: 95px;
+    font-size: 25px;
+  }
+
+  .new-post select {
+    font-size: 25px;
   }
   
   /* Add Animation */
