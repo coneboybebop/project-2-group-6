@@ -140,7 +140,7 @@ display: block;
 
 ul {
   list-style: none;
-  padding: none;
+  padding: 0;
 }
 
 
