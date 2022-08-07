@@ -1,0 +1,21 @@
+<h2>{{username}}</h2>
+{{#if posts.length}}
+<h3>Click your post content to edit Or Click on the City/Zipcode to redirect to that page</h3>
+<section>
+  
+  <div class="post-list">
+    {{#each posts as |post|}}
+    <article class="dashboard-post posts">
+      <div>
+        <h4><a href="/regional/{{post.zipcode.zipcode}}">{{post.zipcode.city_name}}/{{post.zipcode.zipcode}}</a></h4>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.post_content}}</a>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+{{#unless posts.length}}
+<h3>You have no posts yet!</h3>
+{{/unless}}

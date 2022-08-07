@@ -26,7 +26,6 @@ main {
     width: auto;
 }
 .top-bar {
-
     text-align: center;
     background: linear-gradient(#0C8054 10%, #fdf5eb);
     margin-bottom: 12px;
@@ -40,7 +39,6 @@ main {
     font-size: 50px;
 }
 
-
 h1, h2, h3, form, input{
     text-align: center;  
     font-size: 2rem;
@@ -48,14 +46,12 @@ h1, h2, h3, form, input{
     padding: 0;
     display: inline-block;
     width: 100%;
-    
 }
 
 .zip-input {
     width: 30%;
     text-align: left;
 }
-
 
 .section {
     margin: 0 0 20px 0;
@@ -66,7 +62,7 @@ h1, h2, h3, form, input{
 .posts {
     color: var(--secondary);
     background-color: var(--tertiary);
-    margin: 2px;
+    margin: 10px;
     border-radius: 25px;
     width: 50%;
     text-align: center;
@@ -90,23 +86,16 @@ display: block;
     text-align: center;
 }
 
-
-
 .input-box {
     width: 30%;
     font-size: 1.2rem;
     border: 2px solid var(--dark);
     border-radius: var(--border-radius);
-
-
-
 }
 
 .post-background {
     width: 100%;
     border-radius: var(--border-radius);
-    
-
 }
 
 .button {
@@ -115,7 +104,7 @@ display: block;
     padding: 6px 5px;
     width: 30%;
     display: flex;
-    color: var(--dark);
+    color: var(--primary);
     border: none;
     outline: none;
     background-color: var(--secondary);
@@ -127,9 +116,6 @@ display: block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-
-    
-    
 }
 
 #input textarea {
@@ -137,19 +123,10 @@ display: block;
     background: var(--secondary);
 }
 
-
 ul {
   list-style: none;
   padding: 0;
 }
-
-
-
-
-
-
-
-
 
 /* Modal for zip code entry validation */
 .modal{
@@ -287,6 +264,59 @@ ul {
   .new-post select {
     font-size: 25px;
   }
+
+  .dashboard-post a {
+    padding: 5px;
+    color: var(--secondary);
+  }
+
+  .container {
+    margin: 10px auto;
+    padding: 0px 0px 10px 0px;
+    border: solid 2px rgb(49, 30, 16);
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+}
+
+.container h2 {
+    background: linear-gradient(#0C8054 10%, #fdf5eb);
+    color: rgb(--dark);
+    position: relative;
+    top: -26px;
+    padding: 5px 5px;
+    font-weight: lighter;
+}
+
+input {
+    width: 80%;
+    margin: 5px;
+}
+
+label {
+    margin: 5px;
+}
+
+  .container button {
+    width: 81%;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    align-items: center;
+
+}
+
+.container a {
+    margin: 5px;
+    display: inline-block;
+    width: 20%;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
   
   /* Add Animation */
   @keyframes animatetop {

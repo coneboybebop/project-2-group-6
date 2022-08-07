@@ -7,8 +7,6 @@
   <title>Living Local</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-
-
     <div class="top-bar">
         <header>
             <h1>
@@ -16,12 +14,12 @@
             </h1>
             <nav>
                 {{#if loggedIn}}
-                <button id="logout" class="btn">logout</button>
+                <button id="logout" class="btn">Logout</button>
+                <a href="/dashboard" id="dashboard" class="btn"> My Dashboard</a>
                 {{else}}
-                <a href="/login" id="login" class="btn">login</a>
+                <a href="/login" id="login" class="btn">Login</a>
                 {{/if}}
-            </nav>
-           
+            </nav> 
         </header>
     </div>
         <main>
@@ -29,7 +27,7 @@
         </main>
     
     {{#if loggedIn}}
-    <script src="javascript/logout.js"></script>
+    <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
 </html>
