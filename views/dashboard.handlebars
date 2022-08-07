@@ -1,0 +1,17 @@
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <div>
+    {{#each posts as |post|}}
+    <article class="dashboard-post">
+      <div>
+        <h3>{{post.zipcode.city_name}}/{{post.zipcode.zipcode}}</h3>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">{{post.post_content}}</a>
+      </div>
+      
+      
+    </article>
+    {{/each}}
+  </div>
+</section>
+{{/if}}

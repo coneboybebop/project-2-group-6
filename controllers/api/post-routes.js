@@ -60,9 +60,13 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-    Post.update({
-        where: {
-            id: req.params.id
+    Post.update(
+        {
+            post_content: req.body.post_content
+        },
+        {
+            where: {
+                id: req.params.id
         }
     })
     .then(dbPostData => {
