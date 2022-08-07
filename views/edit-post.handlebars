@@ -1,21 +1,32 @@
-<article class="container">
+<article class="container new-post">
     <h2>
         Edit Post
     </h2>
-    <form class="edit-post-form">
+    <form class="edit-post-form new-post-form">
 
         <div>
             <label for="post-content">Content</label><br>
             <textarea id="post-content" name="post-content">{{post.post_content}}</textarea>
         </div>
+        <div>
+      <label for="category">Category:</label>
+      <select name="category" id="category-type">
+        <option
+        value="Restaurant">Restaurant
+        </option>
+        <option
+        value="Activity">Activity
+        </option>
+        <option
+        value="Other">Other
+        </option>
+      </select>
+    </div>
         
-        <button type="submit">Update Post</button>
-        <button type="button" class="delete-post-btn">Delete</button>
+        <button type="submit" class="btn">Update Post</button>
+        <button type="button" class="delete-post-btn btn">Delete</button>
     </form>
 </article>
 
-
-
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-<script src="/javascript/comment.js"></script>

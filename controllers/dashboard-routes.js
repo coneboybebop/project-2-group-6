@@ -1,6 +1,5 @@
-const sequelize = require('../config/connection');
 const router = require('express').Router();
-const { Post, User, Comment, Zipcode } = require('../models');
+const { Post, Zipcode } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -11,13 +10,14 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
             'id',
             'post_content',
-            'zip_id'
+            'zip_id',
+            'user_id'
         ],
         include: [
             {
                 model: Zipcode,
                 attributes: ['city_name', 'zipcode']
-            } 
+            }
         ]
     })
     .then(dbPostData => {
@@ -37,7 +37,14 @@ router.get('/edit/:id', withAuth, (req, res) => {
         },
         attributes: [
             'id',
-            'post_content'
+            'post_content',
+            'zip_id'
+        ],
+        include: [
+            {
+                model: Zipcode,
+                attributes: ['city_name', 'zipcode']
+            } 
         ]
     })
     .then(dbPostData => {
