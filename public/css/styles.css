@@ -343,6 +343,10 @@ label {
   bottom: 5px;
 }
 
+.edit-link {
+  text-underline-offset: 5px;
+}
+
 
   
   /* Add Animation */
