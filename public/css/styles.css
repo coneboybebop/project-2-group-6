@@ -1,7 +1,7 @@
 :root {
-    --primary: #cfcfcf;
+    --primary: #f9e69c;
     --secondary: #333333;
-    --tertiary: #0C8054;
+    --tertiary: rgb(75, 180, 236);
     --dark: #170c01;
     --border-radius: .3rem;
     
@@ -27,16 +27,24 @@ main {
 }
 .top-bar {
     text-align: center;
-    background: linear-gradient(#0C8054 10%, #fdf5eb);
+    background-image: url("../assets/cityscape.jpg");
+    background-size: contain;
+    background-position:center ;
+    background-position: 80%;
     margin-bottom: 12px;
     margin-top: 0px;
 
+}
+
+.border {
+  border: 2px solid black;
 }
 
 .application-title {
     color: var(--primary);
     text-shadow: 3px 3px var(--dark);
     font-size: 50px;
+    text-decoration: none;
 }
 
 h1, h2, h3, form, input{
@@ -63,6 +71,7 @@ h1, h2, h3, form, input{
     color: var(--secondary);
     background-color: var(--tertiary);
     margin: 10px;
+    padding: 5px;
     border-radius: 25px;
     width: 50%;
     text-align: center;
@@ -226,11 +235,12 @@ ul {
 
   .btn {
     border-radius: 5px;
-    background-color: var(--tertiary);
+    background: #0C8054;
     text-decoration: none;
     padding: 5px;
+    margin: 5px;
     border: 2px, solid black;
-    color: black;
+    color: var(--primary);
     font-size: 15px;
     margin: 5px;
   }
@@ -317,6 +327,27 @@ label {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.zip-banner {
+  color: yellow
+}
+
+.login {
+  position: relative;
+  bottom: 5px;
+}
+
+.edit-link {
+  text-underline-offset: 5px;
+}
+
+
   
   /* Add Animation */
   @keyframes animatetop {

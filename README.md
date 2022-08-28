@@ -26,3 +26,4 @@ https://living-locally.herokuapp.com/
 ![screenshot](./assets/images/homepage.png)
 ![screenshot](./assets/images/login.png)
 ![screenshot](./assets/images/regional.png)
+![screenshot](./assets/images/dashboard.png)

@@ -5,13 +5,12 @@
                 {{#if this.length}}
                 {{#each this}}
                 <li class="posts">
-                    <p>
-                        Category: {{category}}
-                    </p>
                     <div>
                     {{post_content}}
                     </div>
-                    <span>posted by: {{user.username}} </span>
+                    <div class="about">
+                    <span>Category: {{category}}</span><span> posted by: {{user.username}} </span>
+                    </div>
                 </li>
                 {{/each}}
                 {{/if}}
